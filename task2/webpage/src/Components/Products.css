@@ -1,0 +1,15 @@
+.products {
+  padding: 40px;
+  background-color: aquamarine;
+ 
+}
+.productList {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.productList img {
+  width: 150px;
+  border-radius: 8px;
+  display: flex;
+}
