@@ -1,0 +1,196 @@
+/* =====================
+   BASE CARD
+===================== */
+.card {
+  display: inline-block;
+  vertical-align: top;
+
+  margin-top: 80px !important;
+  margin: 30px;
+
+  width: 280px;
+  min-height: 400px;
+  padding: 18px;
+
+  text-align: center;
+  border-radius: 26px;
+
+  background: linear-gradient(
+    145deg,
+    #d05be2,
+    #37ebee
+  );
+
+  position: relative;
+  overflow: hidden;
+
+  /* 🌈 premium multi-layer shadow */
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.25),
+    0 30px 70px rgba(0,0,0,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.35);
+
+  /* entrance animation */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: cardFadeUp 0.9s cubic-bezier(.21,.61,.35,1) forwards;
+
+  transition: transform 0.45s ease,
+              box-shadow 0.45s ease;
+}
+
+/* hover lift */
+.card:hover {
+  transform: translateY(-18px) scale(1.06);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.35),
+    0 55px 120px rgba(0,0,0,0.45),
+    0 0 45px rgba(255,255,255,0.35);
+}
+
+/* =====================
+   IMAGE
+===================== */
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+
+  padding: 6px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.9),
+    rgba(255,255,255,0.5)
+  );
+
+  box-shadow:
+    0 14px 35px rgba(0,0,0,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.75);
+}
+
+/* =====================
+   TEXT
+===================== */
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin: 8px 0 6px;
+}
+
+.card p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+/* =====================
+   BUTTON – ADD TO CART
+===================== */
+.card button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 34px;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    90deg,
+    #ff512f,
+    #dd2476,
+    #6a11cb
+  );
+
+  box-shadow:
+    0 10px 25px rgba(221,36,118,0.65),
+    0 0 30px rgba(106,17,203,0.55);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* hover */
+.card button:hover {
+  transform: scale(1.15);
+  box-shadow:
+    0 16px 45px rgba(221,36,118,0.9),
+    0 0 55px rgba(106,17,203,0.85);
+}
+
+/* click ripple effect */
+.card button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.6),
+    transparent 60%
+  );
+  opacity: 0;
+  transform: scale(0.3);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.card button:active::after {
+  opacity: 1;
+  transform: scale(1.4);
+}
+
+/* =====================
+   🎨 10 IMAGE & BUTTON COLORS
+===================== */
+.card:nth-child(1) img { background: linear-gradient(135deg,#ffecd2,#fcb69f); }
+.card:nth-child(1) button { background: linear-gradient(90deg,#ff9a9e,#fad0c4); }
+
+.card:nth-child(2) img { background: linear-gradient(135deg,#a1c4fd,#c2e9fb); }
+.card:nth-child(2) button { background: linear-gradient(90deg,#667eea,#764ba2); }
+
+.card:nth-child(3) img { background: linear-gradient(135deg,#d4fc79,#96e6a1); }
+.card:nth-child(3) button { background: linear-gradient(90deg,#11998e,#38ef7d); }
+
+.card:nth-child(4) img { background: linear-gradient(135deg,#fbc2eb,#a6c1ee); }
+.card:nth-child(4) button { background: linear-gradient(90deg,#c471f5,#fa71cd); }
+
+.card:nth-child(5) img { background: linear-gradient(135deg,#fdfbfb,#ebedee); }
+.card:nth-child(5) button { background: linear-gradient(90deg,#434343,#000000); }
+
+.card:nth-child(6) img { background: linear-gradient(135deg,#f6d365,#fda085); }
+.card:nth-child(6) button { background: linear-gradient(90deg,#f83600,#f9d423); }
+
+.card:nth-child(7) img { background: linear-gradient(135deg,#84fab0,#8fd3f4); }
+.card:nth-child(7) button { background: linear-gradient(90deg,#36d1dc,#5b86e5); }
+
+.card:nth-child(8) img { background: linear-gradient(135deg,#fccb90,#d57eeb); }
+.card:nth-child(8) button { background: linear-gradient(90deg,#a18cd1,#fbc2eb); }
+
+.card:nth-child(9) img { background: linear-gradient(135deg,#e0c3fc,#8ec5fc); }
+.card:nth-child(9) button { background: linear-gradient(90deg,#6a11cb,#2575fc); }
+
+.card:nth-child(10) img { background: linear-gradient(135deg,#f093fb,#f5576c); }
+.card:nth-child(10) button { background: linear-gradient(90deg,#ff512f,#dd2476); }
+
+/* =====================
+   KEYFRAMES
+===================== */
+@keyframes cardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

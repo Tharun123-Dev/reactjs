@@ -1,0 +1,39 @@
+.card {
+    background-color: #8c99a3;
+    border: 1px solid #368f5b;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: auto;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 400px;
+
+}
+
+
+
+.card-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.card-body {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.card-footer {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+    font-size: 12px;
+    color: #999;
+}
+.card-name{
+    font-size: 24px;
+    font-weight: bold;
+    color: #222222;
+}
