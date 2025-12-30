@@ -1,4 +1,4 @@
-import Props from "./Props/PROPS.JSX"
+import Props from "./Props/Props.JSX"
 
 
 function App() {
