@@ -1,0 +1,127 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== FULL PAGE GRADIENT BACKGROUND ===== */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    270deg,
+    #667eea,
+    #764ba2,
+    #ff758c,
+    #43cea2
+  );
+  background-size: 600% 600%;
+  animation: bgFlow 12s ease infinite;
+}
+
+/* Background animation */
+@keyframes bgFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== COUNTER CARD ===== */
+div {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+
+  padding: 40px 45px;
+  border-radius: 22px;
+  text-align: center;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.2);
+
+  animation: fadeUp 0.9s ease forwards;
+}
+
+/* Card entry animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== COUNTER TEXT ===== */
+h1 {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  color: #ffffff;
+  margin-bottom: 30px;
+
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== BUTTON BASE ===== */
+button {
+  margin: 10px;
+  padding: 14px 28px;
+
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+
+  color: #fff;
+  transition: all 0.35s ease;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== INDIVIDUAL BUTTON STYLES ===== */
+button:nth-child(2) {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+button:nth-child(3) {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+button:nth-child(4) {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+/* ===== BUTTON HOVER EFFECT ===== */
+button:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== BUTTON CLICK EFFECT ===== */
+button:active {
+  transform: scale(0.95);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  button {
+    width: 100%;
+    margin: 8px 0;
+  }
+}
