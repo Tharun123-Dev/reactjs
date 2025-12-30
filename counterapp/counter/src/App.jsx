@@ -1,5 +1,5 @@
 
-import Count from './Components/counter.jsx'
+import Count from './Components/Counter.jsx'
 
 function App() {
 
